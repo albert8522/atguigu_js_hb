@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44</title>
+    <script>
+        for(var i=0;i<5;i++){
+
+            console.log(i);
+            break;
+        }
+
+
+        // if(true){
+        //     break;
+        //     console.log("hello world");
+        // }
+
+        for(var i=0;i<5;i++){
+
+            console.log(i);
+
+            if(i==2){
+                break;
+            }
+        }
+
+
+
+        console.log("===========================");
+        outer:
+        for(var i=0;i<5;i++){
+
+            console.log("@外层循环"+i);
+
+            for(var j=0;j<5;j++){
+
+                break outer;
+                console.log("内层循环"+j);
+            }
+        }
+
+        console.log("===========================");
+
+        for(var i=0;i<5;i++){
+
+           
+            if(i==2){
+                break;
+            }
+
+            console.log(i);
+        }
+
+        for(var i=0;i<5;i++){
+
+            if(i==2){
+                continue;
+            }
+
+            console.log(i);
+        }
+
+        console.log("===========================");
+
+        for( var i=0;i<5;i++){
+
+            for(var j=0;j<5;j++){
+
+                if(j==1){
+                    continue;
+                }
+
+                console.log("-->"+j);
+            }
+
+            console.log("@-->"+i);
+        }
+
+
+        console.log("============素数练习===============");
+
+        console.time("test");
+        for(var i=2;i<=100;i++){
+
+            var flag = true;
+
+            for(var j=2;j<i;j++){
+
+                if(i%j==0){
+                    
+                    flag = false;
+                    break;
+                }
+            }
+
+            console.log(i);
+        }
+
+        console.timeEnd("test");
+    //test: 11.77392578125 ms
+
+    //test: 8.44091796875 ms
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
