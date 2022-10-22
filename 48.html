@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>48</title>
+    <script>
+
+        var obj = new Object();
+
+        // obj.123 =789;
+
+        // console.log(obj.123);
+
+        obj["123"]= 789;
+
+        obj["nihao"] ="你好";
+
+        var n ="nihao";
+
+        console.log(obj["123"]);
+
+        console.log(obj[n]);
+
+
+        obj.test= true;
+
+        console.log(obj.test);
+
+        obj.test= null;
+
+        console.log(obj.test);
+
+        obj.test= undefined;
+
+        console.log(obj.test);
+
+
+        var obj2 = new Object();
+
+        obj2.name="猪八戒";
+
+        obj.test = obj2;
+
+        console.log(obj.test.name);
+
+
+        console.log("name" in obj);
+
+        console.log("name" in obj2);
+
+        console.log("nihao" in obj);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
