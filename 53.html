@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>53</title>
+    <script>
+
+        function isEvenOdd(num){
+
+            if(num%2 ==0 ){
+                return true;
+            }else{
+
+                return false;
+            }
+        }
+
+        var result = isEvenOdd(4);
+
+        console.log("result ="+result);
+
+        function isEvenOdd2(num){
+
+            return num%2==0;
+        }
+
+        var result2 = isEvenOdd2(5);
+
+        console.log("result2="+result2);
+
+
+        function area(r){
+
+            return 3.14*r *r;
+        }
+
+        var a= area(10);
+
+        console.log("The area is "+a);
+
+
+        function sayHello(name,age,gender,address){
+
+            console.log("我是"+name+" 我今年"+age+" 性别 "+gender+" 我住在"+address);
+        }
+
+        sayHello("汪灏",39,"男","Otara");
+
+        function sayHello2(o){
+
+            console.log("我是"+o.name+" 我今年"+o.age+" 性别 "+o.gender+" 我住在"+o.address);
+        }
+
+        var obj ={
+            name:"Albert",
+            age:39,
+            gender:"Male",
+            address:"Auckland"
+        };
+
+        sayHello2(obj);
+      
+
+        function fun(a){
+
+            console.log("a="+a);
+        }
+
+        fun(sayHello2);
+
+        console.log("====================");
+
+        function fun2(a){
+            a(obj);
+        }
+
+        fun2(sayHello2);
+
+        fun(function(){
+            alert("hello");
+        });
+
+        console.log("====================");
+
+        fun(area(10));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
